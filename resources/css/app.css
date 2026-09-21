@@ -1,0 +1,87 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+@theme {
+    /* Typography ------------------------------------------------------- */
+    --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-editorial: 'Newsreader', Georgia, 'Times New Roman', serif;
+    --font-script: 'Caveat', 'Segoe Script', cursive;
+
+    /* Clinic brand palette --------------------------------------------- */
+    --color-brand-teal: #103d52;
+    --color-brand-dark: #0c2b3a;
+    --color-brand-hover: #164e68;
+    --color-brand-accent: #237871;
+    --color-brand-sage: #388e85;
+    --color-brand-ink: #227066;
+    --color-brand-light: #f4f8fa;
+
+    /* Motion ----------------------------------------------------------- */
+    --animate-fade-in: fade-in 0.18s ease-out both;
+    --animate-scale-in: scale-in 0.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+    --animate-rise: rise 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scale-in {
+    from {
+        opacity: 0;
+        transform: translateY(6px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes rise {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@layer base {
+    body {
+        @apply bg-brand-light font-sans text-slate-800 antialiased;
+    }
+
+    /* Alpine hides modal and menu markup until it has initialised. */
+    [x-cloak] {
+        display: none !important;
+    }
+}
+
+/* Slimmer scrollbars on the wide data tables in the admin panel. */
+@utility scrollbar-thin {
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+        height: 8px;
+        width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: --alpha(var(--color-slate-400) / 70%);
+        border-radius: 9999px;
+    }
+}
