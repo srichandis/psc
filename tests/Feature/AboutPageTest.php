@@ -20,6 +20,23 @@ class AboutPageTest extends TestCase
     }
 
     /**
+     * The page opens with the clinic introduction and its philosophy.
+     */
+    public function test_about_page_renders_the_introduction_and_philosophy(): void
+    {
+        $response = $this->get('/about');
+
+        $response->assertSee('well-established multidisciplinary specialist medical clinic', false);
+        $response->assertSee('make high-quality specialist healthcare more accessible', false);
+        $response->assertSee('Suite 1, 4 Jowett Street, Coomera QLD 4209', false);
+        $response->assertSee('Our current services include Psychiatry, Neurology', false);
+        $response->assertSee('good healthcare begins with listening', false);
+        $response->assertSee('Our philosophy');
+        $response->assertSee('Specialist expertise. Personalised care. Close to home.');
+        $response->assertSee('the individual behind the diagnosis', false);
+    }
+
+    /**
      * The page renders the location and parking information.
      */
     public function test_about_page_renders_location_and_parking(): void

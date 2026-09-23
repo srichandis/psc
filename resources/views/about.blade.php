@@ -19,17 +19,49 @@
             <h1 class="mt-2 font-editorial text-4xl font-bold tracking-tight text-brand-teal sm:text-5xl">
                 About Our Clinic
             </h1>
-            <p class="mt-4 text-base leading-relaxed text-slate-600">
+            <p class="mt-6 rounded-2xl border border-l-4 border-slate-200/90 border-l-brand-accent bg-white px-6 py-5 text-base leading-relaxed font-semibold text-brand-teal shadow-sm">
                 Specialist care with a personal approach, delivered by a multidisciplinary team in the heart of Coomera.
             </p>
         </header>
 
-        <div class="mt-12 grid grid-cols-1 gap-10 lg:mt-16 lg:grid-cols-12 lg:gap-12">
+        <div class="mt-6 grid grid-cols-1 gap-10 lg:mt-8 lg:grid-cols-12 lg:gap-12">
 
             {{-- ================================================== --}}
             {{-- Main content column                                --}}
             {{-- ================================================== --}}
             <div class="space-y-12 lg:col-span-8">
+
+                {{-- Introduction --}}
+                <section>
+                    <div class="{{ $prose }}">
+                        <p>{{ config('clinic.name') }} is a well-established multidisciplinary specialist medical clinic located in Coomera, in the heart of the rapidly growing Northern Gold Coast.</p>
+                        <p>Our vision has always been simple: to make high-quality specialist healthcare more accessible to patients and families within our local community, without the need to travel long distances to access experienced specialist care.</p>
+                        <p>Located at Suite 1, {{ config('clinic.address.full') }}, our clinic brings together experienced medical specialists and allied health professionals across a range of disciplines. Our current services include Psychiatry, Neurology, Endocrinology, Nephrology, Geriatric Medicine and Psychology, with our specialist services continuing to evolve in response to the healthcare needs of the community.</p>
+                        <p>At {{ config('clinic.name') }}, we believe good healthcare begins with listening. Every patient comes with their own history, concerns and circumstances, and our specialists are committed to providing thoughtful, evidence-based and individualised care.</p>
+                        <p>Having multiple specialties within one clinic also allows patients to access a broader range of expertise in a familiar and convenient setting. Our visiting specialists maintain their own areas of clinical expertise while being supported by an experienced and welcoming administrative team.</p>
+                    </div>
+                </section>
+
+                {{-- Our philosophy --}}
+                <section id="philosophy" class="scroll-mt-24">
+                    <div class="flex items-center gap-3">
+                        <span class="{{ $iconWrap }}">
+                            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                            </svg>
+                        </span>
+                        <h2 class="{{ $heading }}">Our philosophy</h2>
+                    </div>
+
+                    <p class="mt-5 font-editorial text-xl leading-snug font-bold text-brand-teal sm:text-2xl">
+                        Specialist expertise. Personalised care. Close to home.
+                    </p>
+
+                    <div class="{{ $prose }} mt-4">
+                        <p>We aim to provide specialist healthcare that combines clinical excellence with compassion, respect and a genuine understanding of the individual behind the diagnosis.</p>
+                        <p>Whether you are attending for an initial specialist assessment, ongoing treatment or multidisciplinary care, our team is here to make your healthcare journey as straightforward and supportive as possible.</p>
+                    </div>
+                </section>
 
                 {{-- Location and parking --}}
                 <section id="location" class="scroll-mt-24">
