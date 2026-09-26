@@ -59,7 +59,7 @@
                     {{-- Hero image with script signature --}}
                     <div class="relative mt-4 lg:col-span-5 lg:mt-0">
                         <div class="group relative aspect-5/4 overflow-hidden rounded-2xl border border-white/80 shadow-lg sm:aspect-4/3 lg:aspect-5/4">
-                            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80"
+                            <img src="https://images.unsplash.com/photo-1622042795081-c27996872dbc?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                  alt="Specialist consultation at {{ config('clinic.name') }}"
                                  class="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.02]">
 
